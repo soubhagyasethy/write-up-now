@@ -10,7 +10,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
 code {
@@ -18,16 +20,22 @@ code {
     monospace;
 }
 
+.container {
+  max-width: 80%;
+  /* background-color: red; */
+  margin: 0 auto;
+}
 .nav {
   display: flex;
   list-style-type: none;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding: 1.5rem;
+  background-color: beige;
 }
 
 .nav > li {
-  margin: 0 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .nav > li > a {
@@ -37,4 +45,53 @@ code {
 
 .nav > li > a:hover {
   text-decoration: underline;
+}
+
+/* create post page */
+.create-post {
+  /* background-color: aquamarine; */
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.create-post h1 {
+  text-align: center;
+}
+
+.form-field {
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 0.8em 0 0.2em 0;
+}
+
+input {
+  height: 3em;
+  border: 0.1em solid #e1e1e1;
+  border-radius: 0.4em;
+  font-size: 0.8em;
+  padding: 0 0.5em;
+}
+
+textarea {
+  border: 0.1em solid #e1e1e1;
+  height: 22em;
+  font-size: 0.9em;
+  padding: 0.5em;
+}
+
+.create-post-button {
+  /* height: 2.1em; */
+  background: #4caf50;
+  color: #fff;
+  font-size: 0.8em;
+  border: none;
+  border-radius: 0.2em;
+  padding: 0.5em;
+  margin-top: 1em;
+  cursor: pointer;
 }
