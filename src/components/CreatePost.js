@@ -1,16 +1,26 @@
 import { useState } from "react";
+import { firestore } from "../firebase";
 
 function CreatePost() {
-  const [title, setTitle] = useState();
-  const [subtitle, setSubTitle] = useState();
-  const [content, setContent] = useState();
+  const [title, setTitle] = useState("");
+  const [subTitle, setSubTitle] = useState("");
+  const [content, setContent] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log("title: ", title);
-    console.log("subtitle: ", subtitle);
-    console.log("content: ", content);
+    console.log(title, subTitle, content);
+    firestore.collection("Posts").add({
+      title,
+      subTitle,
+      content,
+      createdAt: new Date(),
+    });
+
+    setTitle("");
+    setSubTitle("");
+    setContent("");
   }
+
   return (
     <div className="create-post">
       <h1>Create Post</h1>
@@ -29,7 +39,7 @@ function CreatePost() {
           <label>Sub Title</label>
           <input
             type="text"
-            value={subtitle}
+            value={subTitle}
             onChange={(e) => setSubTitle(e.target.value)}
           />
         </div>
