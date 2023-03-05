@@ -59,7 +59,7 @@ function CreatePost() {
       </div>
 
       <div className="preview-container">
-        <h1 className="preview-heading">Your blog will look like this!</h1>
+        <h1 className="preview-heading">Preview!</h1>
         <Preview title={title} subtitle={subTitle} content={content} />
       </div>
     </div>

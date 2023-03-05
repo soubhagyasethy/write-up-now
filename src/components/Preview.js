@@ -1,5 +1,4 @@
 export default function Preview(props) {
-  const date = new Date();
   return (
     <div className="preview">
       <h3 className="blog-title">{props.title}</h3>
