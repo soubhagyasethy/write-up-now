@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { firestore } from "../firebase";
+import Preview from "./Preview";
 
 function CreatePost() {
   const [title, setTitle] = useState("");
@@ -22,38 +23,45 @@ function CreatePost() {
   }
 
   return (
-    <div className="create-post">
-      <h1>Create Post</h1>
+    <div className="create-post-container">
+      <div className="create-post">
+        <h1>Create Post</h1>
 
-      <form onSubmit={handleSubmit}>
-        <div className="form-field">
-          <label>Title</label>
-          <input
-            type="text"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
-        </div>
+        <form onSubmit={handleSubmit}>
+          <div className="form-field">
+            <label>Title</label>
+            <input
+              type="text"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+            />
+          </div>
 
-        <div className="form-field">
-          <label>Sub Title</label>
-          <input
-            type="text"
-            value={subTitle}
-            onChange={(e) => setSubTitle(e.target.value)}
-          />
-        </div>
+          <div className="form-field">
+            <label>Sub Title</label>
+            <input
+              type="text"
+              value={subTitle}
+              onChange={(e) => setSubTitle(e.target.value)}
+            />
+          </div>
 
-        <div className="form-field">
-          <label>Content</label>
-          <textarea
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-          ></textarea>
-        </div>
+          <div className="form-field">
+            <label>Content</label>
+            <textarea
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+            ></textarea>
+          </div>
 
-        <button className="create-post-button">Create Post</button>
-      </form>
+          <button className="create-post-button">Create Post</button>
+        </form>
+      </div>
+
+      <div className="preview-container">
+        <h1 className="preview-heading">Your blog will look like this!</h1>
+        <Preview title={title} subtitle={subTitle} content={content} />
+      </div>
     </div>
   );
 }

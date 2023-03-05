@@ -48,14 +48,22 @@ code {
 }
 
 /* create post page */
+.create-post-container {
+  display: flex;
+  padding-top: 0.5rem;
+}
+
 .create-post {
-  /* background-color: aquamarine; */
-  padding: 0 1.5rem 1.5rem 1.5rem;
+  padding: 0 1rem 1rem 1rem;
   display: flex;
   flex-direction: column;
+  width: 50%;
+  border-right: 0.1rem solid grey;
+  margin-right: 0.25rem;
 }
 
 .create-post h1 {
+  font-size: 1.5em;
   text-align: center;
 }
 
@@ -94,6 +102,41 @@ textarea {
   padding: 0.5em;
   margin-top: 1em;
   cursor: pointer;
+}
+
+/* preview */
+.preview-container {
+  width: 50%;
+  padding: 0 1rem 1rem 1rem;
+}
+
+.preview {
+  border: 0.1em solid grey;
+  border-radius: 0.5em;
+  background-color: bisque;
+  padding: 0.5em;
+  margin-top: 0.8rem;
+}
+
+.preview-heading {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.blog-title {
+  font-size: large;
+}
+
+.blog-subtitle {
+  font-size: medium;
+}
+
+hr {
+  margin: 0.5em 0;
+}
+
+.blog-content {
+  font-size: small;
 }
 
 /* responsiveness */
