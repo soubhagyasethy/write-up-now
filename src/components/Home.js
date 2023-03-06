@@ -1,7 +1,9 @@
-import React from "react-dom";
-
 function Home() {
-  return <div>Home</div>;
+  return (
+    <div className="home">
+      <h1>Tech Blog</h1>
+    </div>
+  );
 }
 
 export default Home;
