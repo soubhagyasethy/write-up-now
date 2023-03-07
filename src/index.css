@@ -35,7 +35,7 @@ code {
 }
 
 .nav > li {
-  margin-right: 0.5rem;
+  margin-right: 1rem;
 }
 
 .nav > li > a {
@@ -128,7 +128,7 @@ textarea {
 }
 
 .blog-subtitle {
-  font-size: medium;
+  font-size: smaller;
 }
 
 hr {
@@ -162,6 +162,15 @@ hr {
   text-decoration: underline;
 }
 
+/* post detail */
+.post-detail {
+  border: 0.1em solid grey;
+  border-radius: 0.5em;
+  background-color: bisque;
+  padding: 0.5em;
+  margin-top: 0.8rem;
+}
+
 /* responsiveness */
 @media only screen and (max-width: 600px) {
   .container {
@@ -179,5 +188,9 @@ hr {
 
   .preview-container {
     width: 100%;
+  }
+
+  .post-detail {
+    margin: 0.8rem;
   }
 }

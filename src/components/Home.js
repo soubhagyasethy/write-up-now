@@ -23,7 +23,7 @@ function Home() {
 
   return (
     <div className="home">
-      <h1>Tech Blog</h1>
+      <h2>Tech Blog</h2>
       <div id="blog-by">Soubhagya</div>
 
       {posts.map((post, index) => (
