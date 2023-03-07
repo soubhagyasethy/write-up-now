@@ -2,13 +2,14 @@
 
 A blogging web app where users can write & post their own blogs. Made using Reactjs.
 
-- _For using the web app visit_: https://responsive-stopwatch.netlify.app/
+- _For using the web app visit_: https://write-up-now.netlify.app/
 
 - Use Case Example:
 
 ### Features:
 
 - Easy-to-use interface
+- Responsive.
 - Create/write a blog on the create blog page.
 - Side-by-side live blog preview while writing.
 - On successful submission, the blog will appear on the home page feed.
