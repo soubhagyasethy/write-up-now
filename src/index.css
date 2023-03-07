@@ -139,6 +139,29 @@ hr {
   font-size: small;
 }
 
+/* Home page */
+.home {
+  text-align: center;
+}
+.post {
+  border: 0.1em solid grey;
+  margin: 1em 0.5em;
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.post > a {
+  text-decoration: none;
+}
+
+.post > a:hover {
+  opacity: 0.6;
+  text-decoration: underline;
+}
+
 /* responsiveness */
 @media only screen and (max-width: 600px) {
   .container {

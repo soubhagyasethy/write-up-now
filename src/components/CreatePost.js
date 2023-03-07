@@ -9,7 +9,6 @@ function CreatePost() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(title, subTitle, content);
     firestore.collection("Posts").add({
       title: title.value,
       subTitle: subTitle.value,
@@ -26,12 +25,12 @@ function CreatePost() {
         <form onSubmit={handleSubmit}>
           <div className="form-field">
             <label>Title</label>
-            <input type="text" {...title} />
+            <input {...title} />
           </div>
 
           <div className="form-field">
             <label>Sub Title</label>
-            <input type="text" {...subTitle} />
+            <input {...subTitle} />
           </div>
 
           <div className="form-field">
